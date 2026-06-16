@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chapter 4 alternate diner cutscene">
+    <title>Qc's Dinner</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            transition: display ease-in 1s;
+        }
+
+        img {
+            opacity: 1;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            animation: fade 2s;
+        }
+
+        @keyframes fade {
+            from{opacity: 0};
+            to{opacity: 1};
+        }
+    </style>
+</head>
+<body>
+    <img id="dialogue" src="https://64.media.tumblr.com/135283d9fe5c866345f381850bc176c8/1a492f098981129a-f6/s640x960/c49189366c4153109e939ea4a21edb48904b08a2.pnj">
+</body>
+
+<script>
+    const imgs = [
+        'https://64.media.tumblr.com/135283d9fe5c866345f381850bc176c8/1a492f098981129a-f6/s640x960/c49189366c4153109e939ea4a21edb48904b08a2.pnj',
+        'https://64.media.tumblr.com/8f443cf4679eaad4dc7c63ab2df262bc/1a492f098981129a-cb/s640x960/1dd9e16f5601da32e677158c447e927ebdb7b233.pnj',
+        'https://64.media.tumblr.com/88d3ab395ecf19a563c2a70c36baf351/1a492f098981129a-f5/s640x960/e0613836cfa9f62cfc3b2f662d7f82f56a8fafb5.pnj',
+        'https://64.media.tumblr.com/43df27a0c80213640c41fb914f27e302/1a492f098981129a-a2/s640x960/6fbf0ca596165d6fe03ca43b560caa051ff1d7cd.pnj',
+        'https://64.media.tumblr.com/3e179104643ab898688bea53e7227188/1a492f098981129a-da/s640x960/69a5be134e44ee9cd030023aafd65cba23088440.pnj',
+        'https://64.media.tumblr.com/abd254430d14e4d7e4ad097da578c075/1a492f098981129a-0b/s640x960/9cd7b7187d0a700fe15f35a682a9a348c1d06251.pnj',
+        'https://64.media.tumblr.com/357dfb4056b718488c547167caee0db7/1a492f098981129a-89/s640x960/ae3d68f6945ccc23077acc96870c0b9e98f37337.pnj',
+        'https://64.media.tumblr.com/a24b03089484a59f0e9a952451df8bd4/1a492f098981129a-0b/s640x960/a377b65619597374a36b265755152fe27ff9ce7b.pnj',
+        'https://64.media.tumblr.com/0ef8b380ae88c226a6f50457354d9136/1a492f098981129a-b9/s640x960/6d0b12a165bf58d9aa524bc273e88cb9af97803c.pnj',
+        'https://64.media.tumblr.com/0cc6e7dde8080dc2eb7f60a86d126d16/1a492f098981129a-c5/s640x960/23c2713acdeac78aaceb0b65421a4da5c576ae70.pnj',
+        'https://64.media.tumblr.com/d2bb6ca642c64be0844b55cc6e0377f0/1a492f098981129a-0d/s640x960/5843ed5d898a76dde2b9b9e044ef1836eedff846.pnj',
+        'https://64.media.tumblr.com/ce7795a566544a20cf213abb61e850e9/1a492f098981129a-f3/s640x960/83d7a985e5ff0c17ee7c598afa2b3f9a4f5fe836.pnj',
+        'https://64.media.tumblr.com/13b34c512554205c405246874408c7dd/1a492f098981129a-24/s640x960/1a06e831e42526dfccff8d7c8cbcf844ae26f138.pnj',
+        'https://64.media.tumblr.com/e364cf1b5b6b603d2c67f2e3a3404c88/1a492f098981129a-a5/s640x960/0e19bc80f1417cf7c6138768533be0f6d2d4f251.pnj',
+        'https://64.media.tumblr.com/e8106950462706dc198cf920afac25e2/1a492f098981129a-b0/s640x960/5127df5d49c80834a3a75386d4da06719a556266.pnj',
+        'https://64.media.tumblr.com/b1ae80739ea9b8cdddaab617468be960/1a492f098981129a-bf/s640x960/b588ab2ed0082537f41b4bfc09dc49f98697e5f7.pnj',
+        'https://64.media.tumblr.com/e92607f9f90c743f848e523974f7a78d/1a492f098981129a-48/s640x960/023d8ad9d3a5d1ad04f3da730df6f1810ff31123.pnj',
+        'https://64.media.tumblr.com/2575b94ee4bd1664f335545475deb447/1a492f098981129a-4e/s640x960/f1729151fae113598f0f9d7b5e37c1a4ae21fde8.pnj',
+        'https://64.media.tumblr.com/b6d0b2fe6fbff0927a69368769032886/1a492f098981129a-0c/s640x960/acde7c6d0671ff45fb4eb0e8f49971bcb3e50b6d.pnj'
+    ]
+
+    let i = 1;
+
+    document.getElementById('dialogue').addEventListener(
+        'click', clickimg
+    )
+
+    function clickimg (e) {
+        if (i < imgs.length) {
+            e.target.src = imgs[i];
+            i++;
+        }
+        else {
+            window.location.href = 'bloon.html'
+        }
+    }
+</script>
+</html>

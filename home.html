@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My deltarune zone">
+    <meta name="keywords" content="deltarune, shrine, fansite, fanpage">
+    <title>THE DELTARUNE ZONE</title>
+    <link rel="shortcut icon" href="thedeltarune.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deltastyle.css">
+
+    <style>
+        .dumb-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .dumb-container a {
+            font-size: 1.2rem;
+        }
+
+        .dumbring-light {
+            display: none;
+        }
+
+        body.light .dumbring-dark {
+            display: none;
+        }
+
+        body.light .dumbring-light {
+            display: flex;
+        }
+
+        #nav {
+            margin-bottom: 1rem;
+        }
+
+
+        .left {
+            width: 30%;
+        }
+
+        .right {
+            /*width: 20%;*/
+            display: none;
+        }
+
+        .center {
+            width: 70%;
+        }
+
+        .changelog ul {
+            padding-left: 1rem;
+        }
+
+        .joker {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: normal;
+            background-size: 30.00px 30.00px;
+            background-image: linear-gradient(90deg, #c3f94b 25%, #7f7fff 30%, #7f7fff 50%, #c3f94b 55%, #c3f94b 75%, #7f7fff 80%, #7f7fff 100%);
+        }
+
+        .flowers img {
+            z-index: -10;
+            top: 0;
+            width: 20rem;
+            image-rendering: pixelated;
+        }
+
+        .flower-left {
+            position: fixed;
+            left: 0;
+        }
+
+        .flower-right {
+            position: fixed;
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+        @media only screen and (max-width: 700px) { 
+            .left, .right {
+                width: 100%;
+                padding-bottom: 0;
+            }
+
+            h1 {
+                font-size: 3.3rem;
+            }
+
+            main .box-wrapper:last-child {
+                margin-bottom: 0;
+            }
+
+            .center {
+                width: 100%;
+            }
+
+            .flowers img {
+            z-index: -10;
+            top: 0;
+            width: 10rem;
+            margin-top: 3rem;
+            }
+
+            .flower-left {
+                margin-left: -2rem;
+            }
+
+            .flower-left {
+                margin-right: -2rem;
+            }
+        }
+
+        
+
+        
+    </style>
+
+</head>
+<body class="blueflower">
+    <div class="flowers">
+        <img src="graphics/ch5-flowers.png" class="flower-left">
+        <img src="graphics/ch5-flowers.png" class="flower-right">
+    </div>
+
+    <div class="wrapper">
+        <header id="header"></header>
+
+        <nav id="nav"></nav>
+
+        <main>
+            <div class="left">
+                <div class="box-wrapper">
+                    <h3>THEME</h3>
+                    <div class="box box-alt">
+                        <button id="theme-switch" style="cursor: pointer;">
+                            toggle lightner/darkner mode
+                        </button><br>
+                        <small>last updated: june 2026</small>
+                    
+                    </div>
+                </div>
+
+                <div class="box-wrapper">
+                    <h3>FEATURED ART</h3>
+                    <div class="box box-alt">
+                        <img class="featured" src="https://64.media.tumblr.com/8bd213fd5e86f777395d2f048f1ea38f/3dafba3c990e984c-d0/s1280x1920/89ae64ed8a41e257163e1e8b81f81a7a15172b0c.jpg" alt="featured art">
+                        <small><a href="https://www.fangamer.com/products/deltarune-vinyl-chapter-4">Chapter 4 vinyl cover art.</a> its peak....</small>
+                    </div>
+                </div>
+
+                <div class="box-wrapper">
+                    <h3>CHANGELOG</h3>
+                    <div class="box changelog" style="height: 25rem;">
+                        <h2  style="font-size: 26pt;">changelog</h2>
+                        <small>
+                        
+                            <ul>
+                                <li><b>june 15, 2026</b>: so... deltarune chapter 5 got announced 😅 yeah so i slightly changed the layout and i added a section for my own thoughts (post). still havent figured out how to code the music player zzzz</li>
+                                <li><b>june 4, 2026</b>: DELTARUNE DAY!!! i decided to change the layout completely to add more stuff. you can find the old layout <a href="gonerhome.html">here</a>.
+                                <li><b>apr 19, 2026</b>: added music page.</li>
+                                <li><b>apr 17, 2026</b>: added lightner mode. updated graphics and links page. added changelog.</li>
+                                <li><b>mar 2, 2026</b>: added graphics page.</li>
+                                <li><b><a href="page/decemberholiday.html" style="text-decoration: none;" title="?">dec</a> 2025</b>: revamped theories page completely. added site button. changes to secret pages.</li>
+                                <li><b>nov 2025</b>: added favorites. added extra pages.</li>
+                                <li><b>aug 2025</b>: this shrine was created. previously was only the theories archive page.</li>
+                            </ul>
+                        </small>
+                    </div>
+                </div>
+
+                <div class="box-wrapper">
+                    <h3>CREDITS</h3>
+                    <div class="box">
+                        <small>tiled backgrounds by: kaizocore</small><br>
+                        <p><a href="https://kaizocore.neocities.org/Deltagraphics" target="_blank"><img src="https://64.media.tumblr.com/7dc3e3cb83ec347c854fbdc76e4a170e/6fb894637f02f6a1-bf/s100x200/aa71b002aa37e90192da7ba37c95c4856b254f01.gifv" style="margin: auto; width: fit-content;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center">
+                <div class="box-wrapper">
+                    <h3>INTRO</h3>
+                    <div class="box">
+                        <h2>CHAPTER 5 COUNTDOWN</h2>
+                        <h2 id="countdown"></h2>
+                        <p><b>"the field of pink and gold..."</b></p>
+                        <p>chapter 5 coming on june 24th. i am not ready, its literally tomorrow, tony please postpone the chapter???</p>
+                        <br>
+                        <p><b>site launch</b>: this used to be a shrine on my main site but i have decided to make it into its own thing. deltarune fans welcome !</p>
+                    
+                    
+    
+                        
+                        <hr>
+                        <h2>intro</h2>
+                        <img src="graphics/HERO_CLOAK.gif" alt="white cloak" height="80px" style="float: left; margin-right: 1rem; image-rendering: pixelated;"> 
+                        <p>hi ! you can call me ben (they / she), and this is my deltarune fansite/shrine. i created this to express my love for deltarune and its fandom. feel free to look around <a href="page/friendinsideme.html" style="text-decoration: none;">!</a></p>
+                        <p>* you can find me on the deltaboards, <a href="https://deltaruneboards.net/index.php?showuser=387"><span class="joker">@bendoversito</span></a></p>
+            
+                        <br>
+                        <p>this site is responsive but looks better on desktop.</p>
+                        <p><a href="https://banan.atabook.org/">>> sign my guestbook XD <<</a></p>
+
+                        <br>
+                        <p>link to this site! i will make a better one later.</p>
+                        <img src="deltasite button.png" alt="my site button">
+                        <textarea readonly="" rows="3"><a href="http://banan013.neocities.org/delta/home" target="_blank"><img src="https://64.media.tumblr.com/eb9e6386b89aaf11ec69076228258866/462ce47764d1290a-5f/s100x200/02cf8390953f74218a4a406cd7bf4b9b4f0ca3ea.png"></a></textarea>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="box-wrapper">
+                    <h3>MUSIC</h3>
+                    <div class="box">
+                        <p>this is supposed to have a music player but im still figuring out how to do that 😎</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+
+                <!--
+                <div class="box-wrapper">
+                    <div class="box">
+                        <p>this site is part of the:</p>
+
+                        <span>
+                        <div class="dumb-container dumbring-dark">
+                            <div class="dumb-contents" style="text-align: center">
+                            <a href="https://dumb.trestrestr.es"><img src="https://dumb.trestrestr.es/images/logo.png"></a><br>
+                            <a href="https://dumb.trestrestr.es/redirect?action=previous">previous</a>
+                            <a href="https://dumb.trestrestr.es/redirect?action=random">random</a>
+                            <a href="https://dumb.trestrestr.es/redirect?action=next">next</a>
+                            </div>
+                        </div>
+                        <div class="dumb-container dumbring-light">
+                            <div class="dumb-contents" style="text-align: center">
+                            <a href="https://dumb.trestrestr.es"><img src="https://dumb.trestrestr.es/images/widget_light.png"></a><br>
+                            <a href="https://dumb.trestrestr.es/redirect?action=previous">previous</a>
+                            <a href="https://dumb.trestrestr.es/redirect?action=random">random</a>
+                            <a href="https://dumb.trestrestr.es/redirect?action=next">next</a>
+                            </div>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+                -->
+
+            </div>
+
+        </main>
+    
+         <footer id="blinkies">
+        </footer>
+    
+        </div>
+        
+        
+    </div>
+
+    
+
+    <script src="script.js"></script>
+    <script src="lightnermode.js"></script>
+    <script>
+        let countDate = new Date('2026-06-24T11:00:00-04:00').getTime();
+        let x = setInterval(function() {
+
+            let now = new Date().getTime();
+            let distance = countDate -  now;
+
+            let days = Math.floor(distance / (1000*60*60*24));
+            let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+            let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+            let seconds = Math.floor((distance % (1000*60)) / 1000);
+
+            days = String(days).padStart(2, '0');
+            hours = String(hours).padStart(2, '0');
+            minutes = String(minutes).padStart(2, '0');
+            seconds = String(seconds).padStart(2, '0');
+
+            //output
+            document.getElementById("countdown").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
+
+            if(distance < 0) {
+                clearInterval(x);
+
+                document.getElementById("countdown").innerHTML = "CHAPTER 5 IS HERE!!!"
+            }
+        }, 1000);
+    </script>
+    
+</body>
+</html>

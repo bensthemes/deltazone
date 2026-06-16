@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>old layout</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            --border-color: white;
+            --bg-color: rgb(0, 0, 0);
+            --bg-image: url('https://64.media.tumblr.com/5eb5b69a311f234939b8dfa8f19fea9c/c63bf6245ace1559-d5/s250x400/a316bd978b2ed1a9ce71549fe6cf59b17d27c2de.gifv');
+            --box-color: rgb(0,0,0);
+            --text: white;
+            --hover: lime;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        body.light, body.light button, body.light blockquote, body.light a {
+            --border-color:rgb(234, 0, 39);
+            --bg-color:rgb(255, 237, 186);
+            --bg-image: url('graphics/starstile.jpg');
+            --box-color: rgb(255, 237, 186);
+            --text: rgb(120, 81, 25);
+            --hover: rgb(57, 29, 29);
+        }
+
+        body.light .box {
+            --text: rgb(120, 81, 25);
+            --border-color:rgb(218, 150, 55);
+            --box-color: rgb(255, 237, 186);
+        }
+
+        body.light a:hover {
+            --hover: rgb(57, 29, 29);
+        }
+
+        @font-face {
+            font-family: 'Computer Says No';
+            src: url('computer-says-no.otf.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            margin: 0;
+            margin-bottom: 1rem;
+            font-weight: 200;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        a {
+            color: var(--text);
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        a:hover {
+            color: var(--hover);
+        }
+
+        button {
+            background-color: var(--box-color);
+            border-color: solid 2px var(--border-color);
+            color: var(--text);
+            font-family: "VT323", monospace;
+            font-size: 14pt;
+            padding: 0.2rem 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        blockquote {
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--bg-image);
+            color: var(--text);
+            font-family: "VT323", monospace;
+            font-style: normal;
+            font-size: 17pt;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 280px 540px 280px;
+            grid-template-rows: auto;
+            grid-gap: 10px 60px;
+            grid-template-areas: 
+            "header main nav"
+            "header main blink";
+            min-height: 500px;
+            margin: auto;
+        }
+
+        .box {
+            border: 2px solid var(--border-color);
+            padding: 0.8rem;
+            background-color: var(--box-color);
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            grid-area: header;
+        }
+
+        header .box {
+            margin: 1rem auto;
+            padding: 1rem auto;
+            margin-bottom: 25px;
+            font-family: "Computer Says No", monospace;
+        }
+
+        h1 {
+            margin: 1rem auto;
+            font-size: 70px;
+            font-weight: 200;
+            text-align: center;
+            line-height: 0.9;
+        }
+
+        main {
+            max-height: 570px;
+            padding-top: 2rem;
+            font-family: "Computer Says No", monospace;
+            font-size: 23pt;
+            line-height: 1.2;
+            grid-area: main;
+        }
+
+        main .box {
+            height: 100%;
+            padding: 3.5rem 3rem;
+            overflow-y: auto;
+            scrollbar-color: var(--text) var(--box-color);
+        }
+
+        main p{
+            margin: 0.5rem auto;
+        }
+
+        main p:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 18pt;
+            margin-bottom: 0.4rem;
+            font-weight: 200;
+        }
+
+        nav {
+            margin-bottom: 2rem;
+            grid-area: nav;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        aside {
+            grid-area: blink;
+        }
+
+        .blinkies img {
+            width: 100%;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--box-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--text);
+        }
+
+        img {
+            filter: grayscale(1);
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                display: block;
+            }
+
+            .wrapper {
+                padding: 2rem;
+                min-width: 300px;
+                display: block;
+                
+            }
+
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+
+            header .box{
+                margin: 0.5rem;
+            }
+
+            main {
+                padding-top: 0;
+                min-height: 600px;
+            }
+
+            main .box {
+                width: inherit;
+                padding: 1rem 1.3rem;
+                height: 600px;
+                overflow-y: scroll;
+            }
+
+            main img {
+                max-width: 100%;
+            }
+
+            main, nav {
+                margin-bottom: 1rem;
+            }
+
+            nav li {
+                display: inline;
+                margin-right: 0.7rem;
+            }
+
+            .blinkies img {
+                min-width: 195px;
+            }
+
+            .starwalker {
+                display: none;
+            }
+
+            .delta-rune {
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">
+            <img src="thedeltarune.png" alt="deltarune symbol" height="110px" class="delta-rune">
+            <a href="home.html" style="text-decoration: none;"><h1>DELTARUNE ZONE</h1></a>
+
+            <div class="box">
+                last updated: apr 2026
+                <br>
+                <button id="theme-switch" style="cursor: pointer;">
+                    toggle lightner/darkner mode
+                </button>
+            </div>
+
+            <a href="page/starwalker.html" title="starwalker" class="starwalker"><img src="starwalker.png" alt="the original starwalker" height="70"></a>
+
+        </header>
+        <nav id="nav">
+             <h3>NAV</h3>
+            <div class="box">
+                <ul>
+                    
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="faves.html">favorites</a></li>
+                    <li><a href="links.html">links out</a></li>
+                    <li><a href="graphics.html">graphics</a></li>
+                    <li><a href="deltarchive.html">theories & analysis</a></li>
+                    <li><a href="music.html">music</a></li>
+                    <li>< <a href="home.html">go back</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="box">
+                <p>welcome to ben's deltarune fansite/shrine. this is my love letter to deltarune and its fandom. feel free to look around <a href="page/friendinsideme.html" style="text-decoration: none;">!</a></p>
+                <br><p>this site is under construction !</p>
+                <p><a href="https://banan.atabook.org/">>> sign my guestbook XD <<</a></p>
+                
+                <br>
+    
+                <span>
+                <div class="dumb-container dumbring-dark">
+                    <div class="dumb-contents" style="text-align: center">
+                    <a href="https://dumb.trestrestr.es"><img src="https://dumb.trestrestr.es/images/logo.png"></a><br>
+                    <a href="https://dumb.trestrestr.es/redirect?action=previous">previous</a>
+                    <a href="https://dumb.trestrestr.es/redirect?action=random">random</a>
+                    <a href="https://dumb.trestrestr.es/redirect?action=next">next</a>
+                    </div>
+                </div>
+                </span>
+                
+
+                <br>
+                <h2  style="font-size: 26pt;">changelog</h2>
+                <small>
+
+                
+                <ul>
+                    <li><b>apr 19, 2026</b>: added music page.</li>
+                    <li><b>apr 17, 2026</b>: added lightner mode. updated graphics and links page. added changelog.</li>
+                    <li><b>mar 2, 2026</b>: added graphics page.</li>
+                    <li><b><a href="page/decemberholiday.html" style="text-decoration: none;" title="?">dec</a> 2025</b>: revamped theories page completely. added site button. changes to secret pages.</li>
+                    <li><b>nov 2025</b>: added favorites. added extra pages.</li>
+                    <li><b>aug 2025</b>: this shrine was created. previously was only the theories archive page.</li>
+                </ul>
+                </small>
+
+                <br>
+                <small>find my secret pages boy....</small>
+                
+            </div>
+        </main>
+        
+        <aside id="blinkies">
+            <div class="box blinkies">
+                <img src="https://64.media.tumblr.com/5c68eb124890e55cdc85962234482b75/46b686b8519c325f-47/s250x400/47b646901621f0f88d78c6f3c952963aad34dda8.gifv" alt="weird route blinkie">
+                <a href="https://deltarune.com/code/"><img src="https://64.media.tumblr.com/b2108bcebb7ea4a4958ae65f4b79ad85/46b686b8519c325f-5d/s250x400/25a6702e6b539dd284e654549ae61f0ddc447473.gifv" alt="holidaygirl1225 blinkie"></a>
+                <a href="https://www.tumblr.com/kp12-art/787735298732949504"><img src="https://64.media.tumblr.com/11031d03bd6e3e5f104ab07da7556325/42f41ea30e6a3260-2b/s250x400/a3727ccd19ced672752562e2a9d199cdb9545ea7.gifv" alt="mini fun gang blinkie"></a>
+                <img src="https://64.media.tumblr.com/939f34f2486f768961554f119be3c9b8/46b686b8519c325f-7c/s250x400/bbc0546fd8b5050aa64abf91cc415f88c4604563.gifv" alt="Hometown">
+                <a href="https://www.tumblr.com/starrazors/787849252981309440"><img src="https://64.media.tumblr.com/775bcfd79526a1c1f8a2f0bce8726fd1/d4a7cc3dd21753a1-03/s250x400/65952eabcb2fef2d8ec857bc55ec45fbea75e10b.gifv" alt="juice krusie"></a>
+                <a href="https://www.tumblr.com/twinkfrottage/788091021549600768"><img src="https://64.media.tumblr.com/40198875010d135e704c6bbd6055f8ff/9e2ca982fbb9f1cf-c7/s250x400/6bd963e66e91cfb679038dda498bdc95fa503672.gifv" alt="icee thing"></a>
+                <img src="https://64.media.tumblr.com/4b0170215065c8263d2f3e2960c16f51/8e782af85249706f-23/s250x400/86070547c0df289494876b8cc92649d59f456b17.gifv" alt="snowgrave route blinkie">
+            </div>
+        </aside>
+    </div>
+    
+</body>
+</html>
