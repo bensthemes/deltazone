@@ -201,18 +201,21 @@ hr {
     margin: 1.5rem auto;
     border-color: var(--text);
 }
+
 @media only screen and (max-width: 700px) {
     body {
         display: block;
     }
     .wrapper {
-        padding: 2rem;
+        padding: 1rem;
         min-width: 300px;
         display: block;
     }
+
     h1 {
         margin-bottom: 0.5rem;
         font-size: 3.3rem;
+        margin-top: -0.4rem;
     }
     header .box{
         margin: 0.5rem;
@@ -226,6 +229,11 @@ hr {
         padding: 1rem 1.3rem;
         font-size: 1.3rem;
     }
+
+    main .box-wrapper {
+        margin-bottom: 0.8rem;
+    }
+
     main .box small {
         font-size: 1.2rem;
     }
@@ -236,7 +244,7 @@ hr {
         max-width: 100%;
     }
     main, nav {
-        margin-bottom: 1rem;
+        margin-bottom: 0.7rem;
     }
     nav li {
         margin-right: 0.7rem;

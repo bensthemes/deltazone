@@ -101,3 +101,9 @@ body {
 #playtime {
     white-space: nowrap;
 }
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
