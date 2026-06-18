@@ -1,0 +1,103 @@
+@import url("../deltastyle.css");
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    image-rendering: pixelated;
+}
+
+body {
+    margin: 0;
+    overflow: clip;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: none;
+    color: var(--text);
+}
+
+#music-logo {
+    object-fit: cover;
+    width: 90px;
+    height: 90px;
+}
+
+#player {
+    display: none;
+}
+
+#music-right {
+    display:flex;
+    flex-direction:column;
+    gap: 2px;
+    user-select: none; /* prevent grabbing everything */
+    flex-grow: 1;
+    min-width: 0;
+}
+
+#song-uploader {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#playback-bar {
+    display: flex;
+    margin: 4px 0;
+    width: 100%; /* Full-width */
+    height: 4px; /* Specified height */
+    background: var(--text);
+}
+
+#playback-fill {
+    height: 4px; /* Specified height */
+    background: var(--bold-color);
+}
+
+#details {
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#controls button {
+    border: none;
+    align-items: center;
+    margin-top: 0;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+}
+
+#volume-area {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#volume-bar {
+    display: flex;
+    margin: 4px 0;
+    width: 100%; /* Full-width */
+    height: 4px; /* Specified height */
+    background: var(--text);
+}
+
+#volume-fill {
+    /*width: 50%; /* Full-width */
+    height: 4px; /* Specified height */
+    background: var(--bold-color);
+}
+
+#playtime {
+    white-space: nowrap;
+}

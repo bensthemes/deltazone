@@ -1,295 +1,251 @@
-        * {
-            --border-color: white;
-            --bg-color: rgb(0, 0, 0);
-            --bg-image: url('https://64.media.tumblr.com/5eb5b69a311f234939b8dfa8f19fea9c/c63bf6245ace1559-d5/s250x400/a316bd978b2ed1a9ce71549fe6cf59b17d27c2de.gifv');
-            --box-color: rgb(0,0,0);
-            --text: white;
-            --title-color: white;
-            --hover: lime;
-            --bold-color: rgb(248, 82, 162);
-            box-sizing: border-box;
-            word-wrap: break-word;
-        }
 
-        body.light, body.light .box, body.light .box hr, body.light button, body.light blockquote, body.light a, body.light h1, .light b {
-            --border-color:rgb(120, 81, 25);
-            --bg-color:rgb(255, 237, 186);
-            --bg-image: url('graphics/greengrasstile.jpg');
-            --box-color: rgb(255, 237, 186);
-            --text: rgb(120, 81, 25);
-            --title-color: rgb(57, 29, 29);
-            --hover: rgb(57, 29, 29);
-            --bold-color: rgb(208, 68, 40);
-        }
 
-        body.light a:hover {
-            --hover: rgb(208, 68, 40);
-        }
-
-        body * {
-            --border-color: blue;
-            --bold-color: rgb(84, 138, 255);
-            --bg-color: black;
-            --bg-image: url('none');
-        }
-
-        @font-face {
-            font-family: 'Computer Says No';
-            src: url('computer-says-no.otf.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Determination Mono';
-            src: url('page/DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
-            font-weight: lighter;
-            font-style: normal;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        b {
-            color: var(--bold-color);
-        }
-
-        h2 {
-            margin: 0;
-            margin-bottom: 1rem;
-            font-weight: 200;
-        }
-
-        h3 {
-            margin: 0;
-        }
-
-        a {
-            color: var(--text);
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        a:hover {
-            color: var(--hover);
-        }
-
-        button {
-            background-color: var(--box-color);
-            border-color: solid 2px var(--border-color);
-            color: var(--text);
-            font-family: "Determination Mono", monospace;
-            text-align: left;
-            font-size: 14pt;
-            padding: 0.2rem 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        blockquote {
-            color: var(--text);
-            opacity: 0.8;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            background-image: var(--bg-image);
-            color: var(--text);
-            font-family: 'Determination Mono', monospace;
-            font-style: normal;
-            font-size: 17pt;
-            height: 100vh;
-            width: 100%;
-            margin: 0;
-            align-items: center;
-        }
-
-        .wrapper {
-            max-width: 67rem;
-            margin: auto;
-            padding: 5rem;
-            padding-top: 1.8rem;
-        }
-
-        .box {
-            border: 2px solid var(--border-color);
-            padding: 0.8rem;
-            background-color: var(--box-color);
-            font-size: 16pt;
-            line-height: 1.4;
-        }
-
-        nav .box {
-            line-height: 1;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            grid-area: header;
-            margin-bottom: 1rem;
-        }
-
-        header .box {
-            margin: 1rem auto;
-            padding: 1rem auto;
-        }
-
-        .banner {
-            display: flex;
-            align-items: center;
-        }
-
-        .delta-rune {
-            margin-right: 1rem;
-        }
-
-        .delta-rune {
-            width: 80px;
-            height: auto;
-        }
-
-        h1 {
-            margin: 0.5rem auto;
-            font-size: 80px;
-            font-weight: 200;
-            line-height: 0.9;
-            color: var(--title-color);
-        }
-
-        main {
-            font-size: 23pt;
-            line-height: 1.2;
-            grid-area: main;
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-        }
-
-        main .box {
-            height: 100%;
-            width: 100%;
-            padding: 1.5rem;
-            overflow-y: auto;
-            scrollbar-color: var(--text) var(--box-color);
-        }
-
-        main .box-wrapper {
-            margin-bottom: 2rem;
-        }
-
-        main .box-alt {
-            padding: 0.8rem;
-        }
-
-        main p {
-            margin: 0.5rem auto;
-        }
-
-        main p:first-child {
-            margin-top: 0;
-        }
-
-        main li {
-            line-height: 1.5;
-        }
-
-        h3 {
-            font-size: 18pt;
-            margin-bottom: 0.4rem;
-            font-weight: 200;
-        }
-
-        nav {
-            margin-bottom: 2rem;
-        }
-
-        nav li {
-            display: inline;
-            margin-right: 0.7rem;
-            font-size: 1.4rem;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding-left: 0;
-        }
-
-        footer {
-            height: 50px;
-        }
-
-        .featured {
-            width: 100%;
-        }
-
-        hr {
-            margin: 1.5rem auto;
-            border-color: var(--text);
-        }
-
-        @media only screen and (max-width: 700px) {
-            body {
-                display: block;
-            }
-
-            .wrapper {
-                padding: 2rem;
-                min-width: 300px;
-                display: block;
-            }
-
-            h1 {
-                margin-bottom: 0.5rem;
-                font-size: 5rem;
-            }
-
-            header .box{
-                margin: 0.5rem;
-            }
-
-            main {
-                padding-top: 0;
-                flex-direction: column;
-            }
-
-            main .box {
-                width: inherit;
-                padding: 1rem 1.3rem;
-                font-size: 1.3rem;
-            }
-
-            main .box small {
-                font-size: 1.2rem;
-            }
-
-            main .box-alt {
-                padding: 0.8rem;
-            }
-
-            main img {
-                max-width: 100%;
-            }
-
-            main, nav {
-                margin-bottom: 1rem;
-            }
-
-            nav li {
-                margin-right: 0.7rem;
-            }
-
-            .banner {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .delta-rune {
-                display: none;
-            }
-        }
+* {
+    --border-color: white;
+    --bg-color: rgb(0, 0, 0);
+    --bg-image: url('https://64.media.tumblr.com/5eb5b69a311f234939b8dfa8f19fea9c/c63bf6245ace1559-d5/s250x400/a316bd978b2ed1a9ce71549fe6cf59b17d27c2de.gifv');
+    --box-color: rgb(0,0,0);
+    --text: white;
+    --title-color: white;
+    --hover: lime;
+    --bold-color: rgb(248, 82, 162);
+    --transition: 0s;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+body.light, body.light .box, body.light .box hr, body.light button, body.light blockquote, body.light a, body.light h1, .light b, .light iframe html body{
+    --border-color:rgb(120, 81, 25);
+    --bg-color:rgb(255, 237, 186);
+    --bg-image: url('graphics/greengrasstile.jpg');
+    --box-color: rgb(255, 237, 186);
+    --text: rgb(120, 81, 25);
+    --title-color: rgb(57, 29, 29);
+    --hover: rgb(57, 29, 29);
+    --bold-color: rgb(208, 68, 40);
+}
+body.light a:hover {
+    --hover: rgb(208, 68, 40);
+}
+body * {
+    --border-color: blue;
+    --bold-color: rgb(84, 138, 255);
+    --bg-color: black;
+}
+@font-face {
+    font-family: 'Computer Says No';
+    src: url('computer-says-no.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Determination Mono';
+    src: url('page/DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+body {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    color: var(--text);
+    font-family: 'Determination Mono', monospace;
+    font-style: normal;
+    font-size: 17pt;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    transition: color var(--transition) ease;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+b {
+    color: var(--bold-color);
+    transition: color var(--transition) ease;
+}
+h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+h3 {
+    margin: 0;
+}
+a {
+    color: var(--text);
+    transition: color var(--transition) ease;
+}
+a:visited {
+    color: inherit;
+}
+a:hover {
+    color: var(--hover);
+}
+button {
+    background-color: var(--box-color);
+    border-color: solid 2px var(--border-color);
+    color: var(--text);
+    font-family: "Determination Mono", monospace;
+    text-align: left;
+    font-size: 14pt;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+}
+blockquote {
+    color: var(--text);
+    opacity: 0.8;
+}
+.wrapper {
+    max-width: 67rem;
+    margin: auto;
+    padding: 5rem;
+    padding-top: 1.8rem;
+}
+.box {
+    border: 2px solid var(--border-color);
+    padding: 0.8rem;
+    background-color: var(--box-color);
+    font-size: 16pt;
+    line-height: 1.4;
+    transition: border var(--transition) ease, background-color var(--transition) ease;
+}
+nav .box {
+    line-height: 1;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: header;
+    margin-bottom: 1rem;
+}
+header .box {
+    margin: 1rem auto;
+    padding: 1rem auto;
+}
+.banner {
+    display: flex;
+    align-items: center;
+}
+.delta-rune {
+    margin-right: 1rem;
+}
+.delta-rune {
+    width: 80px;
+    height: auto;
+}
+h1 {
+    margin: 0.5rem auto;
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 0.9;
+    color: var(--title-color);
+    transition: color var(--transition) ease;
+}
+main {
+    font-size: 23pt;
+    line-height: 1.2;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+main .box {
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    overflow-y: auto;
+    scrollbar-color: var(--text) var(--box-color);
+}
+main .box-wrapper {
+    margin-bottom: 1.2rem;
+}
+main .box-alt {
+    padding: 0.8rem;
+}
+main p {
+    margin: 0.5rem auto;
+}
+main p:first-child {
+    margin-top: 0;
+}
+main li {
+    line-height: 1.5;
+}
+h3 {
+    font-size: 18pt;
+    margin-bottom: 0.4rem;
+    font-weight: 200;
+}
+nav {
+    margin-bottom: 2rem;
+}
+nav li {
+    display: inline;
+    margin-right: 0.7rem;
+    font-size: 1.4rem;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+footer {
+    height: 50px;
+}
+.featured {
+    width: 100%;
+}
+hr {
+    margin: 1.5rem auto;
+    border-color: var(--text);
+}
+@media only screen and (max-width: 700px) {
+    body {
+        display: block;
+    }
+    .wrapper {
+        padding: 2rem;
+        min-width: 300px;
+        display: block;
+    }
+    h1 {
+        margin-bottom: 0.5rem;
+        font-size: 3.3rem;
+    }
+    header .box{
+        margin: 0.5rem;
+    }
+    main {
+        padding-top: 0;
+        flex-direction: column;
+    }
+    main .box {
+        width: inherit;
+        padding: 1rem 1.3rem;
+        font-size: 1.3rem;
+    }
+    main .box small {
+        font-size: 1.2rem;
+    }
+    main .box-alt {
+        padding: 0.8rem;
+    }
+    main img {
+        max-width: 100%;
+    }
+    main, nav {
+        margin-bottom: 1rem;
+    }
+    nav li {
+        margin-right: 0.7rem;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .delta-rune {
+        display: none;
+    }
+}

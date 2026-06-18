@@ -7,8 +7,40 @@
     <link rel="stylesheet" href="music.css">
 </head>
 <body>
-    <div class="player-card">
-        
+    <a href="" id="music-left">
+        <img src="" id="music-logo">
+    </a>
+    <div id="music-right">
+        <div id="song-title">
+            <div id="song-name"></div>
+        </div>
+        <small id="song-uploader"></small>
+        <div id="playback-bar">
+            <div id="playback-fill"></div>
+            <div class="knob"></div>
+        </div>
+
+        <div id="details">
+            <div id="controls">
+                <button id="music-prev">⏮</button>
+                <button id="music-toggle">▶</button>
+                <button id="music-next">⏭</button>
+            </div>
+            <div id="volume-area">
+                <span id="volume-icon">🔊</span>
+                <div id="volume-bar">
+                    <div id="volume-fill"></div>
+                    <div class="knob"></div>
+                </div>
+            </div>
+            <div id="playtime"></div>
+        </div>
     </div>
+
+    <div id="player"></div>
+    
+    <script src="music.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../lightnermode.js"></script>
 </body>
 </html>
