@@ -194,11 +194,7 @@
                 <div class="box-wrapper">
                     <h3>INTRO</h3>
                     <div class="box">
-                        <h2>CHAPTER 5 IS WAITING</h2>
-                        <h2 id="countdown"></h2>
-                        <p><b>"the field of pink and gold..."</b></p>
-                        <p>chapter 5 coming on june 24th. i am not ready, its literally tomorrow, tony please change the release date???</p>
-                        <br>
+                        <h2>CHAPTER 5 IS HERE !</h2>
                         <p><b>site launch</b>: this used to be a shrine on my <a href="https://banan013.neocities.org">main site</a> but i have decided to make it into its own thing. deltarune fans welcome !</p>
     
                         
@@ -278,33 +274,6 @@
 
     <script src="script.js"></script>
     <script src="lightnermode.js"></script>
-    <script>
-        let countDate = new Date('2026-06-24T11:00:00-04:00').getTime();
-        let x = setInterval(function() {
-
-            let now = new Date().getTime();
-            let distance = countDate -  now;
-
-            let days = Math.floor(distance / (1000*60*60*24));
-            let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-            let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-            let seconds = Math.floor((distance % (1000*60)) / 1000);
-
-            days = String(days).padStart(2, '0');
-            hours = String(hours).padStart(2, '0');
-            minutes = String(minutes).padStart(2, '0');
-            seconds = String(seconds).padStart(2, '0');
-
-            //output
-            document.getElementById("countdown").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
-
-            if(distance < 0) {
-                clearInterval(x);
-
-                document.getElementById("countdown").innerHTML = "CHAPTER 5 IS HERE!!!"
-            }
-        }, 1000);
-    </script>
     
 </body>
 </html>
