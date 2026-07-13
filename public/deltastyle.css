@@ -23,14 +23,11 @@ body.light, body.light .box, body.light .box hr, body.light button, body.light b
     --hover: rgb(57, 29, 29);
     --bold-color: rgb(208, 68, 40);
 }
+
 body.light a:hover {
     --hover: rgb(208, 68, 40);
 }
-body * {
-    --border-color: blue;
-    --bold-color: rgb(84, 138, 255);
-    --bg-color: black;
-}
+
 @font-face {
     font-family: 'Computer Says No';
     src: url('computer-says-no.otf.woff2') format('woff2');
@@ -132,12 +129,12 @@ header .box {
     margin-right: 1rem;
 }
 .delta-rune {
-    width: 80px;
+    width: 60px;
     height: auto;
 }
 h1 {
     margin: 0.5rem auto;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 200;
     line-height: 0.9;
     color: var(--title-color);
