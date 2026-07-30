@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lancer bounce</title>
+    <style>
+        * {
+            word-wrap: break-word;
+        }
+
+        @font-face {
+            font-family: 'Determination Mono';
+            src: url('../page/DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        .ice-trancer {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(0deg,rgb(44, 34, 50) 0%, rgb(132, 123, 171) 27%, rgb(198, 239, 255) 52%, rgb(102, 183, 254) 78%, rgb(53, 73, 132) 100%);
+            text-shadow: 1px 1px 3px #b0e1ff3d;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Determination Mono', monospace;
+            font-size: 1.2rem;
+        }
+
+        .title, .buttons-wrapper {
+            position: fixed;
+            text-align: center;
+        }
+
+        .title {
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+        }
+
+        .buttons-wrapper {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .buttons {
+            width: fit-content;
+        }
+
+        button {
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            background-color: rgb(173, 220, 255);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1.3rem;
+        }
+
+        button:hover {
+            background-color: rgb(130, 169, 198);
+        }
+
+        canvas {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1 class="ice-trancer" style="margin-bottom: 0;">LOOK AT HIM GO</h1>
+        <p>there is no point to this it's literally just lancer.</p>
+    </div>
+    
+    <canvas>
+
+    </canvas>
+    <div class="buttons-wrapper">
+        <p>Current number of lancers: <span id="lancer-amount"></span></p>
+        <div class="buttons">
+            <button id="add" style="margin-right: 0.7rem;">Add lancer</button>
+            <button id="reset">Reset lancers</button>
+        </div>
+            
+    </div>
+    
+</body>
+<script src="lancer.js"></script>
+</html>
