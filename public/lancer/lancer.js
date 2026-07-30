@@ -6,20 +6,25 @@ canvas.height = window.innerHeight;
 const c = canvas.getContext('2d');
 
 const img = new Image();
+img.src = "lancer.png";
 c.imageSmoothingEnabled = false;
 const add = document.getElementById('add')
 const reset = document.getElementById('reset')
 
 const audio = new Audio('https://file.garden/acoeqRVugnRof4eN/lancer-splat.mp3');
 audio.volume = 0.3;
+const friendLaugh = new Audio('https://file.garden/acoeqRVugnRof4eN/imagefriend.mp3')
+audio.volume = 0.5;
 
-const fun = Math.floor(Math.random() * 100) + 1;
+let fun = Number(localStorage.getItem('funvalue')) || Math.floor(Math.random() * 100) + 1;
 console.log(fun);
 localStorage.setItem("funvalue", fun);
 console.log(localStorage.getItem("funvalue"))
 
 const lancerAmount = document.getElementById('lancer-amount');
 
+const friend = 0.1; 
+const image_friend = new Image()
 
 
 //initial lancer.
@@ -41,7 +46,6 @@ function Lancer(x, y) {
 
     this.draw = function() {
         c.drawImage(img, this.x, this.y, 50, 50);
-        img.src = "lancer.png";
     }
 
     this.update = function() {
@@ -70,11 +74,35 @@ function addLancer() {
     console.log("NEW LANCER ADDED");
 }
 
+function resetLancer() {
+    img.src = "lancer.png"
+    x = Math.random() * (innerWidth - 100) + 50;
+    y = Math.random() * (innerHeight - 100) + 50;
+    dx = (Math.random() - 0.5) * 5;
+    dy = (Math.random() - 0.5) * 3.5;
+    lancers.length = 0;
+    console.log(lancers);
+    lancers.push(new Lancer(x, y, dx, dy));
+    add.disabled = false;
+}
+
+function smile() {
+    img.src = "IMAGE_FRIEND.png";
+    friendLaugh.play();
+    setTimeout(resetLancer, 5000);
+    lancers.length = 1;
+    console.log("smile")
+    add.disabled = true;
+}
+
 
 add.addEventListener("click", () => {
-    addLancer();
-    lancerAmount.textContent = lancers.length;
-    console.log(lancers + "\n AMOUNT OF LANCERS: " + lancers.length);
+    if (Math.random() < (friend / 100)) {
+        smile();
+    } else {
+        addLancer();
+        lancerAmount.textContent = lancers.length;
+    }
 });
 
 //it doesnt work lol 
@@ -90,13 +118,7 @@ function playLancerSplat() {
 
 //reset the lancers.
 reset.addEventListener("click", () => {
-    x = Math.random() * (innerWidth - 100) + 50;
-    y = Math.random() * (innerHeight - 100) + 50;
-    dx = (Math.random() - 0.5) * 5;
-    dy = (Math.random() - 0.5) * 3.5;
-    lancers.length = 0;
-    console.log(lancers);
-    lancers.push(new Lancer(x, y, dx, dy));
+    resetLancer();
     lancerAmount.textContent = lancers.length;
     console.log("LANCERS REMOVED")
 })
@@ -113,7 +135,11 @@ function animate() {
     for(let i = 0; i < lancers.length; i++) {
         lancers[i].update();
     }
-    
-    
 }
 animate();
+
+
+//fun events. LATER
+if(fun == 66) {
+
+}
