@@ -23,8 +23,8 @@ console.log(localStorage.getItem("funvalue"))
 
 const lancerAmount = document.getElementById('lancer-amount');
 
-const friend = 0.1; 
-const image_friend = new Image()
+const friend = 0.01; 
+const image_friend = new Image();
 
 
 //initial lancer.
@@ -84,6 +84,7 @@ function resetLancer() {
     console.log(lancers);
     lancers.push(new Lancer(x, y, dx, dy));
     add.disabled = false;
+    lancerAmount.textContent = lancers.length;
 }
 
 function smile() {
@@ -119,7 +120,6 @@ function playLancerSplat() {
 //reset the lancers.
 reset.addEventListener("click", () => {
     resetLancer();
-    lancerAmount.textContent = lancers.length;
     console.log("LANCERS REMOVED")
 })
 
