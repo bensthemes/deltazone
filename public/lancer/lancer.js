@@ -65,13 +65,19 @@ function Lancer(x, y) {
 
 //add lancer function
 function addLancer() {
-    x = Math.random() * (innerWidth - 100) + 50;
-    y = Math.random() * (innerHeight - 100) + 50;
-    dx = (Math.random() - 0.5) * 5;
-    dy = (Math.random() - 0.5) * 3.5;
+    if (Math.random() < (friend / 100)) {
+        smile();
+    } else {
+        x = Math.random() * (innerWidth - 100) + 50;
+        y = Math.random() * (innerHeight - 100) + 50;
+        dx = (Math.random() - 0.5) * 5;
+        dy = (Math.random() - 0.5) * 3.5;
+        
+        lancers.push(new Lancer(x, y, dx, dy));
+        console.log("NEW LANCER ADDED");
+        lancerAmount.textContent = lancers.length;
+    }
     
-    lancers.push(new Lancer(x, y, dx, dy));
-    console.log("NEW LANCER ADDED");
 }
 
 function resetLancer() {
@@ -97,14 +103,28 @@ function smile() {
 }
 
 
-add.addEventListener("click", () => {
-    if (Math.random() < (friend / 100)) {
-        smile();
-    } else {
+add.addEventListener("click", addLancer);
+
+//THIS SHIT DOESNT WORK. FIX LATER
+/*
+let isSpaceEnabled = true;
+
+window.addEventListener('keydown', (e) => {
+    if(e.key === ' ') {
+        event.preventDefault();
         addLancer();
-        lancerAmount.textContent = lancers.length;
+
+        if (!isSpaceEnabled) return;
+
+        isSpaceEnabled = false;
+
+        setTimeout(() => {
+        isSpaceEnabled = true;
+        }, 5000);
     }
+
 });
+*/
 
 //it doesnt work lol 
 function playLancerSplat() {

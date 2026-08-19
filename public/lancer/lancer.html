@@ -34,7 +34,7 @@
             font-size: 1.2rem;
         }
 
-        .title, .buttons-wrapper {
+        .title, .buttons-wrapper, .music-toggle {
             position: fixed;
             text-align: center;
         }
@@ -79,6 +79,21 @@
             background-color: rgb(130, 169, 198);
         }
 
+        .music-toggle {
+            top: 0;
+            right: 0;
+            padding: 1rem 1rem 0 0;
+        }
+
+        .music-toggle button {
+            border: 2px solid rgb(173, 220, 255);
+            background-color: black;
+        }
+
+        .music-toggle button:hover {
+            background-color: rgb(47, 64, 76);
+        }
+
         canvas {
             background-color: black;
         }
@@ -88,6 +103,14 @@
     <div class="title">
         <h1 class="ice-trancer" style="margin-bottom: 0;">LOOK AT HIM GO</h1>
         <p>there is no point to this it's literally just lancer.</p>
+    </div>
+    <div class="music-toggle">
+        <audio id="bg-music" preload="auto" loop>
+            <source src="https://file.garden/acoeqRVugnRof4eN/Thrash%20Machine.mp3">
+        </audio>
+        <button id="mute-button">
+            🔇
+        </button>
     </div>
     
     <canvas>
@@ -102,6 +125,28 @@
             
     </div>
     
+    
 </body>
 <script src="lancer.js"></script>
+<script>
+        const bgMusic = document.getElementById("bg-music");
+        const btn = document.getElementById("mute-button");
+        bgMusic.volume = 0.4;
+
+        console.log(btn);
+        console.log(bgMusic)
+
+        btn.addEventListener("click", () => {
+
+            console.log(bgMusic.paused);
+
+            if(bgMusic.paused) {
+                bgMusic.play();
+                btn.textContent = "🔊";
+            } else {
+                bgMusic.pause();
+                btn.textContent = "🔇";
+            }
+        });
+</script>
 </html>
