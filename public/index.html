@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
+     <script src="theme-init.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My deltarune zone">
@@ -11,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="deltastyle.css">
+<link rel="stylesheet" href="https://sunnishinez.neocities.org/webring/goners/STYLE.css">
 
     <style>
         .dumb-container {
@@ -54,14 +57,6 @@
 
         .changelog ul {
             padding-left: 1rem;
-        }
-
-        .joker {
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: normal;
-            background-size: 30.00px 30.00px;
-            background-image: linear-gradient(90deg, #c3f94b 25%, #7f7fff 30%, #7f7fff 50%, #c3f94b 55%, #c3f94b 75%, #7f7fff 80%, #7f7fff 100%);
         }
 
         .frostmancer {
@@ -136,20 +131,22 @@
                 <div class="box-wrapper">
                     <h3>THEME</h3>
                     <div class="box box-alt">
-                        <center>
-                            <button id="theme-switch" style="cursor: pointer;">
-                                lightner/darkner mode
-                            </button><br>
-                            <small>last updated: june 2026</small>
-                        </center>
+                            <select name="theme-switch" id="theme-select">
+                                <option value="dark">darkner mode</option>
+                                <option value="light">lightner mode</option>
+                                <option value="survey">survey_program file select</option>
+                                <option value="mantle">GLACEIR</option>
+                            </select><br>
+                            <small style="line-height: 1;">last updated: september 2026</small>
+                        
                     </div>
                 </div>
 
                 <div class="box-wrapper">
                     <h3>FEATURED ART</h3>
                     <div class="box box-alt">
-                        <img class="featured" src="https://64.media.tumblr.com/520e4c3701dc42cdeaa3c30e48aafbaf/4fb712689e720baa-77/s1280x1920/2b1089ddf6c732c02ab2e8eae53044d7dacf10d7.png" alt="featured art">
-                        <small><a href="https://www.tumblr.com/gloomysquidz/821347631065333760">Noelle & Chara</a> by gloomysquidz</small>
+                        <img class="featured" src="https://64.media.tumblr.com/7706d90f7e78714d263c43325ac167d8/642859fe6b1dd433-51/s2048x3072/7ca83f5093cc9f835f8c2e4c4d9afbb028216bdc.png" alt="featured art">
+                        <small>"<a href="https://www.tumblr.com/kittehscribbles34/821057139916341248">* It's nothing but garbage noise.</a>" by kittehscribbles34</small>
                     </div>
                 </div>
 
@@ -159,6 +156,7 @@
                         <small>
                         
                             <ul>
+                                <li><b>september 2, 2026</b>: updated theme switcher, added more themes.</li>
                                 <li><b>june 17, 2026</b>: finally updated the archive with theories from chapters 3&4.</li>
                                 <li><b>june 16, 2026</b>: music player finally done !!!! thanks to <a href="https://lilithdev.neocities.org/">lilith.dev</a>, i used her code as reference teehee.</li>
                                 <li><b>june 15, 2026</b>: so... deltarune chapter 5 got announced 😅 yeah so i slightly changed the layout and i added a section for my own thoughts (post). still havent figured out how to code the music player zzzz</li>
@@ -175,13 +173,20 @@
                 </div>
 
                 <div class="box-wrapper">
-                    <h3>CREDITS</h3>
+                    <h3>WEBRINGS</h3>
                     <div class="box">
-                        <small>tiled backgrounds by: kaizocore</small><br>
-                        <p><a href="https://kaizocore.neocities.org/Deltagraphics" target="_blank"><img src="https://64.media.tumblr.com/7dc3e3cb83ec347c854fbdc76e4a170e/6fb894637f02f6a1-bf/s100x200/aa71b002aa37e90192da7ba37c95c4856b254f01.gifv" style="margin: auto; width: fit-content;"></a><br>
+                        <div id="g_followers" style="width: auto;">
                         
+                        <a id="ftr_ver" href="https://sunnishinez.neocities.org/webring/goners.html"></a>
+                        <br>
+                        <a id="g_prv" title="previous" href="https://sunnishinez.neocities.org/webring/goners?action=previous">❮</a>
+                        <a id="g_rnd" title="random" href="https://sunnishinez.neocities.org/webring/goners?action=random">✦</a>
+                        <a id="g_nxt" title="next" href="https://sunnishinez.neocities.org/webring/goners?action=next">❯</a>
+                        </div>
                     </div>
                 </div>
+
+                
             </div>
 
             <div class="center">
@@ -222,12 +227,17 @@
                         
                         <textarea readonly="" rows="3"><a href="https://followthewhitecloak.neocities.org" target="_blank"><img src="https://64.media.tumblr.com/fa906103cc01c08979fe88c6f82a7d91/462ce47764d1290a-1f/s100x200/782a906dea945fbc5a69a70d8931ca88d75d84a1.png"></a></textarea>
 
-                        
-                        
                     </div>
                 </div>
 
-                
+                <div class="box-wrapper">
+                    <h3>CREDITS</h3>
+                    <div class="box">
+                        <small>tiled backgrounds by: kaizocore</small><br>
+                        <p><a href="https://kaizocore.neocities.org/Deltagraphics" target="_blank"><img src="https://64.media.tumblr.com/7dc3e3cb83ec347c854fbdc76e4a170e/6fb894637f02f6a1-bf/s100x200/aa71b002aa37e90192da7ba37c95c4856b254f01.gifv" style="margin: auto; width: fit-content;"></a><br>
+                        
+                    </div>
+                </div>
             </div>
 
             <div class="right">
@@ -274,7 +284,7 @@
     
 
     <script src="script.js"></script>
-    <script src="lightnermode.js"></script>
+    <script src="theme.js"></script>
     
 </body>
 </html>

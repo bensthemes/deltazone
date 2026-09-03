@@ -1,6 +1,4 @@
-
-
-* {
+:root {
     --border-color: white;
     --bg-color: rgb(0, 0, 0);
     --bg-image: url('https://64.media.tumblr.com/5eb5b69a311f234939b8dfa8f19fea9c/c63bf6245ace1559-d5/s250x400/a316bd978b2ed1a9ce71549fe6cf59b17d27c2de.gifv');
@@ -9,11 +7,18 @@
     --title-color: white;
     --hover: lime;
     --bold-color: rgb(248, 82, 162);
-    --transition: 0s;
+    --transition: 0.2s;
+    --logo: url('thedeltarune.png');
+}
+
+* {
     box-sizing: border-box;
     word-wrap: break-word;
 }
-body.light, body.light .box, body.light .box hr, body.light button, body.light blockquote, body.light a, body.light h1, .light b, .light iframe html body{
+
+/* alt themes stuff */
+
+[data-theme="light"] {
     --border-color:rgb(120, 81, 25);
     --bg-color:rgb(255, 237, 186);
     --bg-image: url('graphics/greengrasstile.jpg');
@@ -22,10 +27,44 @@ body.light, body.light .box, body.light .box hr, body.light button, body.light b
     --title-color: rgb(57, 29, 29);
     --hover: rgb(57, 29, 29);
     --bold-color: rgb(208, 68, 40);
+    --logo: url('thedeltarune_light.png');
+
+    a:hover {
+    --hover: rgb(208, 68, 40);
+    }
 }
 
-body.light a:hover {
-    --hover: rgb(208, 68, 40);
+[data-theme="survey"] {
+    --border-color:rgb(0, 255, 0);
+    --bg-color:rgb(0, 0, 0);
+    --bg-image: none;
+    --box-color: rgb(0, 0, 0);
+    --text: rgb(0, 255, 0);
+    --title-color: rgb(0, 255, 0);
+    --hover: rgb(57, 29, 29);
+    --bold-color: rgb(255, 0, 0);
+    --logo: url('thedeltarune_green.png');
+    /*text-transform: uppercase;*/
+
+    a:hover {
+    --hover: rgb(255, 0, 0);
+    }
+}
+
+[data-theme="mantle"] {
+    --border-color:rgb(202, 202, 202);
+    --bg-color:rgb(58, 68, 103);
+    --bg-image: url('graphics/glaceirtile.jpg');
+    --box-color: rgb(38, 45, 74);
+    --text: rgb(202, 202, 202);
+    --title-color: rgb(202, 202, 202);
+    --hover: rgb(57, 29, 29);
+    --bold-color: rgb(91, 24, 246);
+    --logo: url('HERO_SWORD.gif');
+
+    a:hover {
+    --hover: rgb(91, 24, 246);
+    }
 }
 
 @font-face {
@@ -40,6 +79,7 @@ body.light a:hover {
     font-weight: lighter;
     font-style: normal;
 }
+
 body {
     background-color: var(--bg-color);
     background-image: var(--bg-image);
@@ -130,7 +170,11 @@ header .box {
 }
 .delta-rune {
     width: 60px;
-    height: auto;
+    height: 60px;
+    background-image: var(--logo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: crisp-edges;
 }
 h1 {
     margin: 0.5rem auto;
@@ -198,6 +242,18 @@ hr {
     margin: 1.5rem auto;
     border-color: var(--text);
 }
+
+select {
+    width: 100%;
+    border: 2px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text);
+    padding: 0.3rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
 
 @media only screen and (max-width: 700px) {
     body {
