@@ -67,6 +67,37 @@
     }
 }
 
+[data-theme="halloween"] {
+    --border-color:#F86060;
+    --bg-color:#280828;
+    --bg-image: url('graphics/Giygas_phase_2.png');
+    --box-color: #280828;
+    --text: #F0F0B8;
+    --title-color: #F0F0B8;
+    --hover: rgb(57, 29, 29);
+    --bold-color: #6341E7;
+    --logo: url('graphics/varik.png');
+
+    a:hover {
+    --hover: #F7B294;
+    }
+
+    body, main .box {
+        font-family: 'Earthbound', monospace;
+        font-size: 1.1rem;
+    }
+
+    small, .box p, main ul li{
+        line-height: 2;
+    } 
+
+    .banner {
+        align-items: flex-start;
+    }
+
+
+}
+
 @font-face {
     font-family: 'Computer Says No';
     src: url('computer-says-no.otf.woff2') format('woff2');
@@ -78,6 +109,11 @@
     src: url('page/DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Earthbound';
+    src: url('earthbound.otf.woff2');
 }
 
 body {

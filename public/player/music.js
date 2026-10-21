@@ -15,7 +15,7 @@ const nodes = {
     timeText: document.getElementById("playtime")
 };
 
-const PLAYLIST_ID = "PLNPMDBGQbEI1rQWhgrTnJjRD1WYWSsXcn";
+const PLAYLIST_ID = "PLUseXaqOdaYDwksbwGmhvGniSyGdWUd1Q";
 const params = new URLSearchParams(window.location.search);
 
 const overrideStyle = params.get("style");
